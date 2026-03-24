@@ -1,0 +1,40 @@
+AGENDA DE COMPROMISSOS - RESUMO DIRETO
+
+COMANDOS PARA TESTAR NO POSTMAN
+Base URL: http://localhost:8080
+
+1. Criar compromisso (POST)
+URL: http://localhost:8080/tasks
+Body JSON:
+{
+  "data": "2026-03-26",
+  "hora": "14:30:00",
+  "descricao": "Reuniao de projeto"
+}
+
+2. Listar todos (GET)
+URL: http://localhost:8080/tasks
+
+3. Buscar por ID (GET)
+URL: http://localhost:8080/tasks/1
+
+4. Atualizar (PUT)
+URL: http://localhost:8080/tasks/1
+Body JSON:
+{
+  "data": "2026-03-27",
+  "hora": "09:00:00",
+  "descricao": "Consulta medica"
+}
+
+5. Filtrar por dia (GET)
+URL: http://localhost:8080/tasks?data=2026-03-27
+
+6. Filtrar por semana (GET) - domingo a sabado
+URL: http://localhost:8080/tasks/semana?data=2026-03-27
+
+7. Filtrar por periodo (GET)
+URL: http://localhost:8080/tasks?inicio=2026-03-24&fim=2026-03-31
+
+8. Deletar (DELETE)
+URL: http://localhost:8080/tasks/1

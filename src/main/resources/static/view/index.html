@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Compromissos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Agenda de Compromissos</h1>
+
+    <div class="card">
+        <h2>Novo compromisso</h2>
+        <div class="form-grid">
+            <input type="date" id="data" required>
+            <input type="time" id="hora" required>
+            <input type="text" id="descricao" placeholder="Descricao do compromisso" required>
+            <button onclick="criarTask()">Adicionar</button>
+        </div>
+    </div>
+
+    <div class="card filtros">
+        <h2>Filtros</h2>
+        <div class="form-grid filtros-grid">
+            <input type="date" id="filtroDia" title="Filtrar por dia">
+            <button onclick="filtrarPorDia()">Filtrar dia</button>
+            <input type="date" id="filtroSemana" title="Semana de referencia">
+            <button onclick="filtrarPorSemana()">Filtrar semana</button>
+            <input type="date" id="filtroInicio" title="Inicio do periodo">
+            <input type="date" id="filtroFim" title="Fim do periodo">
+            <button onclick="filtrarPorPeriodo()">Filtrar periodo</button>
+            <button class="secundario" onclick="carregarTasks()">Limpar filtros</button>
+        </div>
+    </div>
+
+    <h2>Compromissos</h2>
+    <ul id="listaTasks"></ul>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
